@@ -12,6 +12,7 @@ class Event extends Entity
     public function __construct($dbConn)
     {
         parent::__construct($dbConn, ['name']);
+        $this->createTableIfNotExists();
     }
 
 

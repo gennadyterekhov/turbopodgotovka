@@ -13,6 +13,7 @@ class User extends Entity
     public function __construct($dbConn)
     {
         parent::__construct($dbConn, ['username', 'first_name', 'last_name']);
+        $this->createTableIfNotExists();
     }
 
 

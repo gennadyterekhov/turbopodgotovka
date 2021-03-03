@@ -11,6 +11,7 @@ class Log extends Entity
     public function __construct($dbConn)
     {
         parent::__construct($dbConn, ['user_id', 'event_id', 'event_time']);
+        $this->createTableIfNotExists();
     }
 
 
