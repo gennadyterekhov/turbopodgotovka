@@ -14,7 +14,7 @@ http://localhost:8000/api/dbApi.php?action=select&entity=user
 1. поместите данные для подключения к базе данных в файл config/db.json
 2. запустите сервер на порте 8000
     1. напрмер, командой `php -S localhost:8000`
-3. откройте страницу `http://localhost:8000/` в браузере
+3. откройте страницу (http://localhost:8000/) в браузере
 
 
 
