@@ -1,6 +1,6 @@
 {
     "DB_HOST"       : "localhost",
-    "DB_USER"       : "gena",
-    "DB_PASS"       : "ghblehjr",
+    "DB_USER"       : "user",
+    "DB_PASS"       : "password",
     "DB_NAME"       : "turbopodgotovka"
 }
