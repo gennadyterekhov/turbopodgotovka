@@ -51,25 +51,25 @@ EOD;
     }
 
 
-    // public function createFromJson()
-    // {
-    //     $result = [];
-    //     $filename = __DIR__ . '/../config/event.json';
+    public function createFromJson()
+    {
+        $result = [];
+        $filename = __DIR__ . '/../config/event.json';
 
-    //     $dataJsonStr = file_get_contents($filename);
-    //     $data = json_decode($dataJsonStr, true);
+        $dataJsonStr = file_get_contents($filename);
+        $data = json_decode($dataJsonStr, true);
 
 
-    //     foreach ($data as $event) {
-    //         // $this->dbConn()
-    //         if (array_key_exists('name', $event)) {
-    //             $result['result'] = $this->create($event);
-    //         } else {
-    //             $result['comments'][] = ' не найден name';
-    //         }
-    //     }
-    //     return $result;
-    // }
+        foreach ($data as $event) {
+            // $this->dbConn()
+            if (array_key_exists('name', $event)) {
+                $result['result'] = $this->create($event['name']);
+            } else {
+                $result['comments'][] = ' не найден name';
+            }
+        }
+        return $result;
+    }
 
 
 

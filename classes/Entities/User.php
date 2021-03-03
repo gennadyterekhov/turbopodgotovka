@@ -59,25 +59,28 @@ EOD;
 
 
 
-    // public function createFromJson()
-    // {
-    //     $result = [];
-    //     $filename = __DIR__ . '/../config/user.json';
+    public function createFromJson()
+    {
+        $result = [];
+        $filename = __DIR__ . '/../config/user.json';
 
-    //     $dataJsonStr = file_get_contents($filename);
-    //     $data = json_decode($dataJsonStr, true);
+        $dataJsonStr = file_get_contents($filename);
+        $data = json_decode($dataJsonStr, true);
 
 
-    //     foreach ($data as $user) {
-    //         // $this->dbConn()
-    //         if (array_key_exists('first_name', $user) && array_key_exists('last_name', $user)) {
-    //             $result['result'] = $this->create($user);
-    //         } else {
-    //             $result['comments'][] = ' не найдены first_name или last_name';
-    //         }
-    //     }
-    //     return $result;
-    // }
+        foreach ($data as $user) {
+            // $this->dbConn()
+            if (array_key_exists('first_name', $user) && array_key_exists('last_name', $user)) {
+                $username = ($user['username']) ? $user['username']: '';
+                $firstName= $user['first_name'];
+                $lastName= $user['last_name'];
+                $result['result'] = $this->create($username, $firstName, $lastName);
+            } else {
+                $result['comments'][] = ' не найдены first_name или last_name';
+            }
+        }
+        return $result;
+    }
 
 
 
