@@ -10,7 +10,6 @@ require_once dirname(__FILE__) . '/../classes/Router.php';
 require_once dirname(__FILE__) . '/../classes/Entities/User.php';
 require_once dirname(__FILE__) . '/../classes/Entities/Log.php';
 require_once dirname(__FILE__) . '/../classes/Entities/Event.php';
-// require_once dirname(__FILE__) . '/../classes/DbApi.php';
 
 
 //настройки php
